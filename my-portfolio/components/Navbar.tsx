@@ -9,7 +9,7 @@ export function Navbar() {
     return (
         <header className="flex h-[80.8px] w-full items-center justify-between px-12 bg-[#0A0A0A]/80 border-b border-white/5 backdrop-blur-md sticky top-0 z-50">
 
-            {/* Left Side: Logo */}
+            
             <div className="flex items-center gap-1 font-space">
                 <span className={`text-[#00F5FF] ${spaceGrotesk.className} text-[24px] font-bold leading-8`}>
           //
@@ -27,7 +27,7 @@ export function Navbar() {
                     <li className="hover:text-[#E5FF00] text-[#E5E7EB] cursor-pointer transition-colors">Contact</li>
                 </ul>
 
-                {/* Resume Button */}
+               
                 <button className="
 
   px-8 py-3 
