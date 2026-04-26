@@ -12,10 +12,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        <main>
+    <html lang="en" className="scroll-smooth">
+      <body className="min-h-screen bg-[#0A0A0A] text-white antialiased">
+        <Navbar /> 
+        <main className="relative w-full">
           {children}
         </main>
       </body>
