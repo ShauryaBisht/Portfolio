@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { Projects } from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         <div className="fixed inset-0 z-0 bg-[radial-gradient(circle_at_50%_50%,transparent_0%,rgba(0,0,0,0.5)_100%)]" />
         <div className="relative z-10">
           <Hero />
-          
+          <Projects />
           <div className="h-screen" /> 
         </div>
       </div>
