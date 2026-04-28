@@ -1,23 +1,24 @@
 @import "tailwindcss";
 
+@theme {
+  /* Set to 8s for that fast, high-energy look */
+  --animate-infinite-scroll: infinite-scroll 8s linear infinite;
 
-
-  
-  @keyframes float {
-  0% { 
-    transform: translate3d(0, 0, 0); 
-  }
-  50% { 
-    transform: translate3d(0, -20px, 0); 
-  }
-  100% { 
-    transform: translate3d(0, 0, 0); 
+  @keyframes infinite-scroll {
+    from { transform: translateX(0); }
+    /* -50% is half the track, -40px is half the gap-20 (80px) */
+    to { transform: translateX(calc(-50% - 40px)); }
   }
 }
 
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-  will-change: transform;
-  backface-visibility: hidden;
-  perspective: 1000px;
+@layer utilities {
+  .animate-infinite-scroll {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    /* Use the variable to control the pause */
+    animation-play-state: var(--play-state, running);
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+  }
 }

@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { Projects } from "@/components/Projects";
+import { StackCarousel } from "@/components/StackCarousel";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <div className="relative z-10">
           <Hero />
           <Projects />
+          <StackCarousel />
           <div className="h-screen" /> 
         </div>
       </div>

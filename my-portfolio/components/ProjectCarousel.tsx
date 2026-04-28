@@ -12,6 +12,30 @@ const projectData = [
     linkText: "View Case Study"
   },
   {
+    title: "Quantix Analytics",
+    category: "SaaS",
+    categoryColor: "#00F5FF",
+    description: "High-performance dashboard for real-time crypto analytics and automated trading strategies.",
+    tech: ['Next.js', 'Rust', 'Postgres'],
+    linkText: "View Case Study"
+  },
+  {
+    title: "Quantix Analytics",
+    category: "SaaS",
+    categoryColor: "#00F5FF",
+    description: "High-performance dashboard for real-time crypto analytics and automated trading strategies.",
+    tech: ['Next.js', 'Rust', 'Postgres'],
+    linkText: "View Case Study"
+  },
+  {
+    title: "Quantix Analytics",
+    category: "SaaS",
+    categoryColor: "#00F5FF",
+    description: "High-performance dashboard for real-time crypto analytics and automated trading strategies.",
+    tech: ['Next.js', 'Rust', 'Postgres'],
+    linkText: "View Case Study"
+  },
+  {
     title: "Lumina Core",
     category: "Open Source",
     categoryColor: "#FF5CFF",
@@ -43,14 +67,19 @@ export const ProjectCarousel = forwardRef((props, ref) => {
       }
     }
   }));
-
-  return (
-    <div ref={scrollRef} className="flex gap-8 overflow-x-auto ...">
-  {projectData.map((project, index) => (
-    <ProjectCard key={index} {...project} />
-  ))}
-</div>
-  );
+return (
+  <div 
+    ref={scrollRef} 
+    className="flex w-full gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-10"
+  >
+    {projectData.map((project, index) => (
+      <div key={index} className="snap-start shrink-0">
+        <ProjectCard {...project} />
+      </div>
+    ))}
+    <div className="min-w-25 shrink-0" />
+  </div>
+);
 });
 
 ProjectCarousel.displayName = "ProjectCarousel";
