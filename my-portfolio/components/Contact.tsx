@@ -28,7 +28,7 @@ const CYAN_ACCENT = "#00F5FF";
 export function Contact() {
     return (
 
-        <section className="flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl mx-auto py-32 md:mt-25 gap-20">
+        <section className="flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl mx-auto py-5  gap-20">
 
 
             <div className="flex flex-col items-start justify-start flex-1 max-w-137.5">

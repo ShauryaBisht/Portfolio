@@ -22,9 +22,9 @@ export default function Home() {
         <div className="fixed inset-0 z-0 bg-[radial-gradient(circle_at_50%_50%,transparent_0%,rgba(0,0,0,0.5)_100%)]" />
         <div className="relative z-10">
           <Hero />
-          <Projects />
-          <StackCarousel />
-          <Contact />
+          <section className="min-h-screen" id="projects"><Projects /></section>
+          <section id="stack" className="min-h-screen"><StackCarousel /></section>
+          <section id="contact" className="min-h-screen"><Contact /></section>
         </div>
       </div>
     </>

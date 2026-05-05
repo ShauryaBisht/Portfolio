@@ -1,12 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --animate-infinite-scroll: infinite-scroll 8s linear infinite;
+  
+  --animate-infinite-scroll: infinite-scroll 30s linear infinite;
 
   @keyframes infinite-scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(calc(-50% - 40px)); }
+   
+    from { 
+      transform: translate3d(0, 0, 0); 
+    }
+    to { 
+      transform: translate3d(-50%, 0, 0); 
+    }
   }
+}
+
+
+section {
+  scroll-margin-top: 80.8px;
 }
 
 @layer utilities {
@@ -14,11 +25,15 @@
     display: flex;
     width: max-content;
     will-change: transform;
+   
     animation-play-state: var(--play-state, running);
+  
     backface-visibility: hidden;
+    perspective: 1000px;
     transform: translate3d(0, 0, 0);
   }
 }
+
 @layer utilities {
   .animate-float {
     animation: float 6s ease-in-out infinite;
@@ -32,4 +47,26 @@
       transform: translateY(-20px);
     }
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f5ff; 
 }
