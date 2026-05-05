@@ -4,54 +4,24 @@ import { ProjectCard } from "./ProjectCard";
 
 const projectData = [
   {
-    title: "Quantix Analytics",
-    category: "SaaS",
-    categoryColor: "#00F5FF",
-    description: "High-performance dashboard for real-time crypto analytics and automated trading strategies.",
-    tech: ['Next.js', 'Rust', 'Postgres'],
-    linkText: "View Case Study"
+    title: "SearchAThon",
+    category: "Full Stack / Real-time",
+    categoryColor: "#00F5FF", // Cyan Accent
+    description: "A real-time hackathon management platform featuring instant join-request notifications via WebSockets and a terminal-inspired interface.",
+    tech: ['Next.js', 'Node.js', 'Socket.io', 'MongoDB'],
+    linkText: "View Project",
+    linkUrl:"https://github.com/ShauryaBisht/SearchAThon"
   },
   {
-    title: "Quantix Analytics",
-    category: "SaaS",
-    categoryColor: "#00F5FF",
-    description: "High-performance dashboard for real-time crypto analytics and automated trading strategies.",
-    tech: ['Next.js', 'Rust', 'Postgres'],
-    linkText: "View Case Study"
-  },
-  {
-    title: "Quantix Analytics",
-    category: "SaaS",
-    categoryColor: "#00F5FF",
-    description: "High-performance dashboard for real-time crypto analytics and automated trading strategies.",
-    tech: ['Next.js', 'Rust', 'Postgres'],
-    linkText: "View Case Study"
-  },
-  {
-    title: "Quantix Analytics",
-    category: "SaaS",
-    categoryColor: "#00F5FF",
-    description: "High-performance dashboard for real-time crypto analytics and automated trading strategies.",
-    tech: ['Next.js', 'Rust', 'Postgres'],
-    linkText: "View Case Study"
-  },
-  {
-    title: "Lumina Core",
-    category: "Open Source",
-    categoryColor: "#FF5CFF",
-    description: "A minimalist UI library for rapid application prototyping with utility-first components.",
-    tech: ['React', 'TypeScript', 'Storybook'],
-    linkText: "Github Repository"
-  },
-  {
-    title: "Nova Protocol",
-    category: "Web3",
-    categoryColor: "#E5FF00",
-    description: "Decentralized identity management system with biometric authentication.",
-    tech: ['Solidity', 'Ethers.js', 'Golang'],
-    linkText: "Project Details"
-  }
-];
+    title: "AnimeVerse",
+    category: "Media / API",
+    categoryColor: "#FF5CFF", // Pink/Purple Accent
+    description: "A comprehensive anime discovery platform using advanced filtering and search algorithms to explore massive databases of Japanese animation.",
+    tech: ['React', 'Tailwind CSS', 'Jikan API', 'Framer Motion'],
+    linkText: "View Project",
+    linkUrl:"https://github.com/ShauryaBisht/Animeverse"
+  }]
+  
 
 
 

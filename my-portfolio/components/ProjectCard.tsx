@@ -8,14 +8,20 @@ const spaceGrotesk = Space_Grotesk({
 })
 const inter = Inter({ subsets: ["latin"] })
 
-export function ProjectCard({ category, categoryColor, title, description, tech, linkText }) {
+
+export function ProjectCard({ category, categoryColor, title, description, tech, linkText, linkUrl }) {
   const isGithub = linkText.toLowerCase().includes("github");
   const isCaseStudy = linkText.toLowerCase().includes("case study");
 
   return (
-    <div className="flex flex-col w-95 group cursor-pointer shrink-0 transition-all duration-500 ease-out">
-      <div className="relative aspect-video w-full rounded-xl border border-white/10 bg-[#0D0D0D] overflow-hidden flex items-center justify-center 
-                      transition-all duration-500 group-hover:border-white/20">
+    
+    <a 
+      href={linkUrl}
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="flex flex-col w-95 group cursor-pointer shrink-0 transition-all duration-500 ease-out outline-none"
+    >
+      <div className="relative aspect-video w-full rounded-xl border border-white/10 bg-[#0D0D0D] overflow-hidden flex items-center justify-center transition-all duration-500 group-hover:border-white/20">
         
         <div className="absolute inset-0 opacity-[0.03]" 
              style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
@@ -37,7 +43,6 @@ export function ProjectCard({ category, categoryColor, title, description, tech,
         />
       </div>
 
-      
       <div className="mt-8 flex flex-col items-start">
         <h3 className={`${spaceGrotesk.className} text-2xl font-bold leading-tight tracking-tight transition-colors duration-500`}
             style={{ color: '#E5E7EB' }}>
@@ -46,9 +51,11 @@ export function ProjectCard({ category, categoryColor, title, description, tech,
             {title}
           </span>
         </h3>
+        
         <p className={`${inter.className} mt-3 text-sm text-[#9CA3AF] leading-relaxed line-clamp-2`}>
           {description}
         </p>
+
         <div className="mt-5 flex flex-wrap gap-4">
           {tech.map((item) => (
             <span key={item} className="text-[10px] font-bold tracking-[0.25em] text-[#4B5563] uppercase">
@@ -56,13 +63,15 @@ export function ProjectCard({ category, categoryColor, title, description, tech,
             </span>
           ))}
         </div>
-        <button className={`${spaceGrotesk.className} mt-8 flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.25em] text-white/70 group-hover:text-white transition-all`}>
+
+       
+        <div className={`${spaceGrotesk.className} mt-8 flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.25em] text-white/70 group-hover:text-white transition-all`}>
           <span className="group-hover:mr-1 transition-all">{linkText}</span>
           {isGithub ? (
             <SiGithub 
               size={16} 
               className="transition-all duration-500 group-hover:scale-110"
-              style={{ fill: 'currentColor' }} // Inherits text color (white/70 -> white)
+              style={{ fill: 'currentColor' }}
             />
           ) : isCaseStudy ? (
             <LuExternalLink size={16} className="transition-all group-hover:opacity-100" />
@@ -73,8 +82,8 @@ export function ProjectCard({ category, categoryColor, title, description, tech,
               style={{ opacity: 0.7 }}
             />
           )}
-        </button>
+        </div>
       </div>
-    </div>
+    </a>
   );
 }
